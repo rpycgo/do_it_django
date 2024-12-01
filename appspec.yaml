@@ -2,14 +2,14 @@ version: 0.0
 os: linux
 files:
     - source: /
-      destination: /home/ubuntu/do_it_django/do_it_django_back
-    - source: /do_it_django/nginx
+      destination: /home/ubuntu/do_it_django/
+    - source: ./nginx
       destination: /home/ubuntu/do_it_django/nginx
-    - source: /docker-compose.yml
+    - source: ./docker-compose.yaml
       destination: /home/ubuntu/do_it_django
-    - source: /.env
+    - source: ./.env
       destination: /home/ubuntu/do_it_django
-    - source: /config/
+    - source: ./config/
       destination: /home/ubuntu/do_it_django/config
 file_exists_behavior: OVERWRITE
 
@@ -21,6 +21,6 @@ permissions:
 
 hooks:
     AfterInstall:
-        - location: scripts/after-deploy.sh
+        - location: scripts/after_deploy.sh
           timeout: 2000
           runas: root

@@ -7,5 +7,5 @@ echo "> 🔵 Stop & Remove docker services."
 sudo docker-compose down
 
 echo "> 🟢 Run new docker services."
-sudo docker-compose up --build -d
+sudo docker-compose up -d --build
 

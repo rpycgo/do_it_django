@@ -3,14 +3,8 @@ os: linux
 files:
     - source: /
       destination: /home/ubuntu/do_it_django/
-    - source: ./nginx
-      destination: /home/ubuntu/do_it_django/nginx
     - source: ./docker-compose.yaml
       destination: /home/ubuntu/do_it_django
-    - source: ./.env
-      destination: /home/ubuntu/do_it_django
-    - source: ./config/
-      destination: /home/ubuntu/do_it_django/config
 file_exists_behavior: OVERWRITE
 
 permissions:

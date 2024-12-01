@@ -3,8 +3,6 @@ os: linux
 files:
     - source: /
       destination: /home/ubuntu/do_it_django/
-    - source: ./docker-compose.yaml
-      destination: /home/ubuntu/do_it_django
 file_exists_behavior: OVERWRITE
 
 permissions:
@@ -16,5 +14,5 @@ permissions:
 hooks:
     AfterInstall:
         - location: scripts/after_deploy.sh
-          timeout: 2000
+          timeout: 60000
           runas: root
